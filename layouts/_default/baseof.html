@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+  <body>
+    <div class="container-fluid"
+      <div class="row">
+        <div class="col">
+          <main>
+            <h1>{{ .Title }}</h1>
+            {{ block "main" . }}
+            {{ end }}
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
