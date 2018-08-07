@@ -1,0 +1,16 @@
+/**
+ * Theme variables, Bootstrap 4 overrides and core utilities.
+ * This file doesn't produce output, but provides common styling set-up for all
+ * pages.
+ * Must be imported before anything else to guarantee the results.
+ */
+// Custom global variables
+$logo-color: rgb(0, 122, 124);
+
+// Bootstrap variables overrides (before loading any Bootstrap file)
+$primary: $logo-color;
+
+// Required Bootstrap base files (don't produce output)
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";

@@ -2,4 +2,4 @@
 title: Home
 ---
 
-Welcome to our new awesome static homepage! Edit me in _content/pages/_index.md_.
+Welcome to our new <strong class="text-primary">awesome static homepage</strong>! Edit me in _content/pages/_index.md_.
