@@ -38,6 +38,10 @@ a { color: #fff; }
     background-color: #fff;
 }
 
+.section-title {
+    padding-bottom: 60px;
+}
+
 a:hover {
     color: #fff;
 }
