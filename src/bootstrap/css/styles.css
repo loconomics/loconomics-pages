@@ -91,7 +91,7 @@ a:hover {
     background-image: url('../images/get-involved.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: center; 
+    background-position: center;
 
 }
 
@@ -158,10 +158,24 @@ a:hover {
 
 
 
-@media (max-width: 991.98px) {
-    .footer-row ul li {
-        text-align: center;
-    }
+
+.arrow-box {
+	position: relative;
+	background: #fff;
+}
+.arrow-box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 20px;
+	margin-left: -20px;
 }
 
 
@@ -249,11 +263,28 @@ a:hover {
 }
 
 @-webkit-keyframes fader {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fader {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid p {
+    margin-left:20px;
+    margin-right:20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .symbol-container {
+    text-align: center;
+  }
+
+  .footer-row ul li {
+      text-align: center;
+  }
 }
