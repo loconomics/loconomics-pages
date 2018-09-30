@@ -31,6 +31,18 @@ a { color: #fff; }
   margin-right: 0;
 }
 
+.text-responsive-left {
+  text-align: left;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
 .color-gray {
     color: #dfdfdf;
 }
@@ -41,6 +53,10 @@ a { color: #fff; }
 
 .background-white {
     background-color: #fff;
+}
+
+.background-blue {
+    background-color: #287FC6;
 }
 
 .section-title {
@@ -151,6 +167,11 @@ a:hover {
     padding: 80px;
     background-color: #007a7c;
     color: #fff;
+    font-size: 0.8em;
+}
+
+.footer li {
+    margin: 10px 0;
 }
 
 #container-outer-member-owned {
@@ -221,6 +242,14 @@ a:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
+.slideshow-dots-container {
+  text-align: center;
+  position: relative;
+  bottom: 20px;
+  color: #fff;
+}
+
+
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -250,10 +279,11 @@ a:hover {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  color: #fff;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #fff;
 }
 
 /* Fading animation */
@@ -283,6 +313,10 @@ a:hover {
 
 @media screen and (max-width: 991px) {
   .symbol-container {
+    text-align: center;
+  }
+
+  .text-responsive-left {
     text-align: center;
   }
 

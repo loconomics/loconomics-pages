@@ -4,6 +4,26 @@
 
     setInterval(function(){
         document.getElementById('div-home-hero-bg').style.backgroundImage = 'url("' + list[i] + '")';
-        if (i >= list.length - 1) i = 0; else i++;      
+        if (i >= list.length - 1) i = 0; else i++;
     }, 5000);
-})(window)
+
+
+    let lastScrollPos = 0;
+    let ticking = false;
+
+    window.addEventListener('scroll', function(e) {
+      lastScrollPos = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          let element = document.getElementById("primary-nav");
+          (lastScrollPos >= 100) ?
+            element.className = element.className.replace(/\bbg-transparent\b/g, "") :
+            element.classList.add("bg-transparent");
+          ticking = false;
+        });
+        
+        ticking = true;
+      }
+    });
+})(window);
