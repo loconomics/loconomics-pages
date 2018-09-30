@@ -26,6 +26,11 @@ ul { list-style: none; }
 
 a { color: #fff; }
 
+/* fixes bootstrap 4 from adding margin-right 15 px to scrollbar */
+.row {
+  margin-right: 0;
+}
+
 .color-gray {
     color: #dfdfdf;
 }
@@ -155,9 +160,6 @@ a:hover {
 #container-inner-member-owned {
     padding: 50px;
 }
-
-
-
 
 .arrow-box {
 	position: relative;
