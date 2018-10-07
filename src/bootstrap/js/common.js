@@ -20,9 +20,13 @@
           (lastScrollPos >= 100) ?
             element.className = element.className.replace(/\bbg-transparent\b/g, "") :
             element.classList.add("bg-transparent");
+
+            if (lastScrollPos >= 100) {
+              //element.classList.toggle("fadeOut");
+            }
           ticking = false;
         });
-        
+
         ticking = true;
       }
     });
