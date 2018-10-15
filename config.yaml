@@ -1,3 +1,4 @@
 baseURL: https://loconomics.com/
 languageCode: en-us
 title: Loconomics
+theme: loconomics
