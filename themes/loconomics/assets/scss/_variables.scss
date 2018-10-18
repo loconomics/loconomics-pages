@@ -1,3 +1,28 @@
+/* style variables */
+$font-stack: Helvetica, sans-serif;
+
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #dfdfdf;
+$color-lightgray: #f4f4f6;
+$color-blue: #287FC6;
+
+
+
+.background-lightgray {
+    background-color: $color-lightgray;
+}
+
+.background-white {
+    background-color: $color-white;
+}
+
+.background-blue {
+    background-color: $color-blue;
+}
+
+
 * {
     margin: 0;
     padding: 0;

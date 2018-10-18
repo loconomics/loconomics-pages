@@ -11,15 +11,17 @@
     {{ else }}
       <meta name="description" content="{{ .Site.Params.site_description }}">
     {{ end }}
-	   <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
-	   <link rel="stylesheet" href="css/styles.css" />
-	   <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-	   <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-     {{ with .Site.Params.favicon }}
+
+    {{ with .Site.Params.favicon }}
 		  <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
    	  <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+
+    {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">    
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
