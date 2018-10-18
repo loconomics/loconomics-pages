@@ -16,17 +16,16 @@
 		  <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
    	  <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
 
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">    
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
     {{/* <!--  Vendor Scripts --> */}}
     {{ $jquery := resources.Get "/js/vendor/jquery/jquery.min.js" }}
     {{ $bootstrap := resources.Get "/js/vendor/bootstrap/bootstrap.min.js" }}
     {{ $popper := resources.Get "/js/vendor/popper/popper.min.js" }}
-  
+
     {{ $script := slice $jquery $bootstrap $popper | resources.Concat "/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $script.Permalink }}"></script>
   </head>

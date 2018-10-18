@@ -1,1 +1,25 @@
-@import "./variables";
+/**
+ * Import all settings and styles needed for the site.
+ *
+ * NOTE: For some reason, importing something from node_modules doesn't need
+ * the parent path syntax here, as happens with any imported file.
+ */
+// Use shared theme set-up (variables, Bootstrap)
+@import "theme";
+
+// Use Bootstrap classes
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/utilities/text";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/navbar";
+// NOTE: check Bootstrap 'scss' folder or docs for more available modules,
+// import only ones in use
+// @see https://getbootstrap.com/docs/4.1/getting-started/introduction/
+// Or ENABLE ALL BS STYLES (not recommended, just uncomment to do some testing, then
+// import just the modules needed as in previous lines, so we get the minimum custom build)
+//@import "node_modules/bootstrap/scss/bootstrap";
+
+// Custom classes
+@import "playground";
