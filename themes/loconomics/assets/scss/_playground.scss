@@ -84,3 +84,9 @@ $color-blue: #287FC6;
       text-align: center;
   }
 }
+
+// Navbar has an overflowing padding, workaround to prevent white space with
+// the current base font-size
+#primary-nav {
+    padding-top: 5px;
+}
