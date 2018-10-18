@@ -7,6 +7,11 @@
 // Use shared theme set-up (variables, Bootstrap)
 @import "theme";
 
+// As exception, we inline a style here, since Bootstrap global overrides don't
+// set the base font-size for the document, they just use 1rem from body and below
+// and changing that to px throws a compilation error.
+html { font-size: $document-font-size; }
+
 // Use Bootstrap classes
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/type";
