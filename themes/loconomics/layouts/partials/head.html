@@ -25,7 +25,9 @@
     {{ $jquery := resources.Get "/js/vendor/jquery/jquery.min.js" }}
     {{ $bootstrap := resources.Get "/js/vendor/bootstrap/bootstrap.min.js" }}
     {{ $popper := resources.Get "/js/vendor/popper/popper.min.js" }}
+    {{ $common := resources.Get "/js/common.js" }}
+    {{ $slides := resources.Get "/js/slides.js" }}
 
-    {{ $script := slice $jquery $bootstrap $popper | resources.Concat "/js/bundle.js" | minify | fingerprint }}
+    {{ $script := slice $jquery $bootstrap $popper $common $slides | resources.Concat "/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $script.Permalink }}"></script>
   </head>
