@@ -1,3 +1,6 @@
+<ul>
+    <li><a href="/">Home</a></li>
 {{ range .Data.Pages }}
-  {{ .Content }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
 {{ end }}
+</ul>

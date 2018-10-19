@@ -1,6 +1,7 @@
 ---
 title: "Privacy"
 date: 2018-10-19T12:12:00+02:00
+type: heropage
 hero_title: "Terms of Service"
 hero_description: "Effective October 1, 2018"
 ---
