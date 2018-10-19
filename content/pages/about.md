@@ -9,7 +9,7 @@ hero_description: "Hero Description Text"
     <div class="container-fluid arrow-box">
     <div class="row h-100 border-padding">
         <div class="col-xs-12 col-lg-4">
-        <img src="../images/bio/anahi.png" style="height: 400px"/>
+        <img src="../../images/bio/anahi.png" style="height: 400px"/>
         </div>
         <div class="col-xs-12 col-lg-8 my-auto">
         <h3>Our Mission</h3>
@@ -41,21 +41,21 @@ hero_description: "Hero Description Text"
     <div class="row">
         <div class="col-xs-12 col-lg-4">
         <div class="text-responsive-left">
-            <img src="../images/bio/josh.png" />
+            <img src="../../images/bio/josh.png" />
             <h6><b>Joshua Danielson</b></h6>
             <h6>Co-Founder</h6>
         </div>
         </div>
         <div class="col-x2-12 col-lg-4">
         <div class="text-responsive-left">
-            <img src="../images/bio/iago.jpg" />
+            <img src="../../images/bio/iago.jpg" />
             <h6>Iago Lorenzo</h6>
             <h6>Co-Founder</h6>
         </div>
         </div>
         <div class="col-x2-12 col-lg-4">
         <div class="text-responsive-left">
-            <img src="../images/bio/janelle.jpg" />
+            <img src="../../images/bio/janelle.jpg" />
             <h6>Janelle Orsi</h6>
             <h6>Board Member</h6>
         </div>
@@ -63,14 +63,14 @@ hero_description: "Hero Description Text"
     </div>
     <div class="row">
         <div class="col-x2-12 col-lg-4">
-            <img src="../images/bio/christopher.jpg" />
+            <img src="../../images/bio/christopher.jpg" />
             <div class="text-responsive-left">
             <h6>Christopher Tellez</h6>
             <h6>Board Member</h6>
             </div>
         </div>
         <div class="col-x2-12 col-lg-4">
-            <img src="../images/bio/yavette.jpg" />
+            <img src="../../images/bio/yavette.jpg" />
             <div class="text-responsive-left">
             <h6>YaVette Holts</h6>
             <h6>Board Member</h6>
@@ -103,18 +103,18 @@ hero_description: "Hero Description Text"
     </div>
     <div class="container section-container-padding">
         <div class="row text-center">
-        <div class="col-xs-12 col-lg-3">
-            <img src="../images/icons/manatt-logo.jpeg"/>
-        </div>
-        <div class="col-xs-12 col-lg-3">
-            <img src="../images/icons/sustainable-logo.png"/>
-        </div>
-        <div class="col-xs-12 col-lg-3">
-            <img src="../images/icons/rainbow-logo.jpeg"/>
-        </div>
-        <div class="col-xs-12 col-lg-3">
-            <img src="../images/icons/civil-logo.jpeg"/>
-        </div>
+            <div class="col-xs-12 col-lg-3">
+                <img src="../../images/icons/manatt-logo.jpeg"/>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                <img src="../../images/icons/sustainable-logo.png"/>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                <img src="../../images/icons/rainbow-logo.jpeg"/>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                <img src="../../images/icons/civil-logo.jpeg"/>
+            </div>
         </div>
     </div>
     </div>

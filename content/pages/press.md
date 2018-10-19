@@ -9,7 +9,7 @@ hero_description: "Hero Description Text"
     <div class="row">
         <div class="col-xs-12 col-lg-12 text-center">
         <div class="width-full">
-            <img src="../images/press/01.jpg">
+            <img src="../../images/press/01.jpg">
         </div>
         A New Wrinkle in the Gig Economy: Workers Get Most of the Money
         <div>
@@ -20,7 +20,7 @@ hero_description: "Hero Description Text"
     <div class="row">
         <div class="col-xs-12 col-lg-6 text-center">
         <div class="width-full">
-            <img src="../images/press/01.jpg">
+            <img src="../../images/press/01.jpg">
         </div>
         A New Wrinkle in the Gig Economy: Workers Get Most of the Money
         <div>
@@ -29,27 +29,7 @@ hero_description: "Hero Description Text"
         </div>
         <div class="col-xs-12 col-lg-6 text-center">
         <div class="width-full">
-            <img src="../images/press/01.jpg">
-        </div>
-        A New Wrinkle in the Gig Economy: Workers Get Most of the Money
-        <div>
-            Amy Cortese | New York Times | July 20, 2016
-        </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-lg-6 text-center">
-        <div class="width-full">
-            <img src="../images/press/01.jpg">
-        </div>
-        A New Wrinkle in the Gig Economy: Workers Get Most of the Money
-        <div>
-            Amy Cortese | New York Times | July 20, 2016
-        </div>
-        </div>
-        <div class="col-xs-12 col-lg-6 text-center">
-        <div class="width-full">
-            <img src="../images/press/01.jpg">
+            <img src="../../images/press/01.jpg">
         </div>
         A New Wrinkle in the Gig Economy: Workers Get Most of the Money
         <div>
@@ -60,7 +40,7 @@ hero_description: "Hero Description Text"
     <div class="row">
         <div class="col-xs-12 col-lg-6 text-center">
         <div class="width-full">
-            <img src="../images/press/01.jpg">
+            <img src="../../images/press/01.jpg">
         </div>
         A New Wrinkle in the Gig Economy: Workers Get Most of the Money
         <div>
@@ -69,7 +49,27 @@ hero_description: "Hero Description Text"
         </div>
         <div class="col-xs-12 col-lg-6 text-center">
         <div class="width-full">
-            <img src="../images/press/01.jpg">
+            <img src="../../images/press/01.jpg">
+        </div>
+        A New Wrinkle in the Gig Economy: Workers Get Most of the Money
+        <div>
+            Amy Cortese | New York Times | July 20, 2016
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-6 text-center">
+        <div class="width-full">
+            <img src="../../images/press/01.jpg">
+        </div>
+        A New Wrinkle in the Gig Economy: Workers Get Most of the Money
+        <div>
+            Amy Cortese | New York Times | July 20, 2016
+        </div>
+        </div>
+        <div class="col-xs-12 col-lg-6 text-center">
+        <div class="width-full">
+            <img src="../../images/press/01.jpg">
         </div>
         A New Wrinkle in the Gig Economy: Workers Get Most of the Money
         <div>
