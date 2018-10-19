@@ -1,7 +1,6 @@
 ---
 title: "Default"
 date: 2018-10-14T21:56:24-07:00
-draft: true
 hero_title: "Member-owned and Driven"
 hero_description: "Hero Description Text"
 ---
