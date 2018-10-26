@@ -19,6 +19,7 @@
         @extend .list-unstyled;
         max-width: 1000px;
         position: relative;
+        margin: 0;
 
         > li {
             // Hidden by default...
@@ -36,7 +37,7 @@
             }
 
             > div {
-                padding: 2em 4em;
+                padding: 2rem 4rem;
                 max-width: 800px;
             }
 
@@ -54,6 +55,25 @@
 
                 &:before {
                     content: '\2014 \00A0';
+                }
+            }
+
+
+            @include media-breakpoint-down(md) {
+                > div {
+                    padding: 2rem 3rem;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                &[aria-current="true"] {
+                    display: block;
+                }
+
+                img {
+                    display: block;
+                    margin: auto;
+                    padding-top: 2rem;
                 }
             }
         }
