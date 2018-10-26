@@ -1,4 +1,9 @@
 ---
-title: "Home"
-date: 2018-10-14T21:56:24-07:00
+title: Welcome to Loconomics
+description: Some Test Description
+hero:
+  title: Hero Title Goes here
+  description: Hero Description here
+  ctalabel: Click Me
+  url: /contact
 ---
