@@ -31,6 +31,10 @@
         @extend .navbar-brand;
 
         position: relative;
+
+        img {
+            height: 75px;
+        }
     }
 
     .PrimaryNavbar-altLogo {
@@ -51,11 +55,23 @@
     }
 
     @include media-breakpoint-down(md) {
+        padding: 0.5rem 1.2rem;
+
         .navbar-collapse {
             // Just below the button
             text-align: right;
             // If using default text-align (left), use next gap
             //padding-top: 1em;
+            // Prevent mixim links with back content on mobile when scroll on top (reset at is-scrolling)
+            background-color: rgba(0, 0, 0, 0.4);
+            // Apply transition to all, since the slide effect from Bootstrap uses transition too
+            transition: all $scrollTransition;
+        }
+
+        .PrimaryNavbar-brand {
+            img {
+                height: 50px;
+            }
         }
     }
 
@@ -70,6 +86,10 @@
 
         .PrimaryNavbar-altLogo {
             opacity: 1;
+        }
+
+        .navbar-collapse {
+            background-color: transparent;
         }
     }
 }
