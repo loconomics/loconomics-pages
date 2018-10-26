@@ -13,6 +13,9 @@
         background-image: url('../images/hero/hero1.jpg');
     }
 
+    // NOTE: If this styles get larger or more sections are placed at this home file,
+    // then is better to move this whole to a _home-involved.scss file and same for
+    // other large chunks of code, then just import them at the top.
     #home-involved {
         padding: 4rem;
         background-image: url('../images/get-involved.jpg');
@@ -65,5 +68,20 @@
             }
         }
 
+        @include media-breakpoint-down(md) {
+            padding: 2.5rem 3rem;
+
+            p {
+                max-width: 65%;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 2.5rem 1.5rem;
+
+            p {
+                max-width: 75%;
+            }
+        }
     }
 }
