@@ -44,15 +44,6 @@ $color-blue: #287FC6;
 
 /// WIP
 
-/* Hero */
-.home-hero__background {
-	background-image: url('../images/hero/hero1.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 500px;
-    margin-top: -100px;
-}
-
 /* Footer */
 .footer__container {
     padding: 80px;
@@ -151,10 +142,6 @@ p {
     padding: 0;
 }
 
-.section-hero {
-    color: #fff;
-}
-
 .container-padding {
     padding: 80px 0;
 }
@@ -177,30 +164,6 @@ p {
     opacity: 0;
     background-color: red;
 }
-
-
-
-
-.home-hero-bg {
-    background-image: url('../images/hero1.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 500px;
-    margin-top: -100px;
-}
-
-.btn-cta-red {
-    background-color: #c44d52;
-    border: 0;
-    border-radius: 0;
-    padding: 10px 35px;
-}
-
-.btn-cta-red:hover {
-    background-color: #c44d52;
-    opacity: 0.8;
-}
-
 
 .involved {
     background-image: url('../images/get-involved.jpg');

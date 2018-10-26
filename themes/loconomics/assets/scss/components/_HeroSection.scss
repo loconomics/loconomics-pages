@@ -1,0 +1,45 @@
+/**
+ * HeroSection CSS component: an horizontal section in the page
+ * showing a hero image, text and optional description and action button.
+ */
+
+@import '../theme';
+
+.HeroSection {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    // Image must be set by the page using this component using something like
+    //background-image: url('../images/hero/hero1.jpg');
+    // and too other images adjustments, like aligning or section height
+
+    // Layout
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    .HeroSection--content {
+        width: 100%;
+
+        > p {
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        > a,
+        > button {
+            @extend .btn;
+
+            color: white;
+            background-color: #c44d52;
+            border: 0;
+            border-radius: 2px;
+            padding: 10px 35px;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

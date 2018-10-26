@@ -3,3 +3,10 @@
  */
 
 @import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+
+#home {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+}
