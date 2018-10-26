@@ -1,0 +1,61 @@
+/**
+ * ServicesSection CSS component: an horizontal section in the page
+ * listing main 3 services available in big and short.
+ */
+
+@import '../theme';
+
+.ServicesSection {
+    @extend .container;
+
+    padding: 80px 0;
+
+    > ul {
+        @extend .row;
+        @extend .list-unstyled;
+
+        > li {
+            @extend .col-lg-4;
+            @extend .text-center;
+        }
+    }
+
+    h2 {
+        @extend .sr-only;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    img {
+        width: 200px;
+        padding: 20px 0;
+    }
+
+    p {
+        margin: 0 40px;
+        color: #999;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 2rem 0;
+
+        li {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        img {
+            width: 150px;
+            padding: 20px 0;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+}
