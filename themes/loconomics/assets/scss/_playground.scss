@@ -85,21 +85,9 @@ $color-blue: #287FC6;
   }
 }
 
-// Navbar has an overflowing padding, workaround to prevent white space with
-// the current base font-size
-#primary-nav {
-    padding-top: 5px;
-}
+
 
 /// More WIP in other pages, coming from src/bootstrap/css/styles.css
-
-.navbar-toggler {
-    border: 0 !important;
-}
-
-// TODO: Remove or relocate, this is a global change, should go into main.scss or
-// scoped for specific case
-img { max-width: 100%; max-height: 100%; }
 
 // TODO: Remove and fix markup for this: this looks like a hack, needed because the proper wrapper around
 // the row was not used (parent should be a container, container-fluid or column class)

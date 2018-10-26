@@ -16,12 +16,12 @@
 
       if (!ticking) {
         window.requestAnimationFrame(function() {
-          let element = document.getElementById("primary-nav");
+          let element = document.getElementsByClassName("PrimaryNavbar")[0];
           if (lastScrollPos >= 100) {
-            element.className = element.className.replace(/\bbg-transparent\b/g, "");
+            element.classList.add('is-scrolling');
           }
           else {
-            element.classList.add("bg-transparent");
+            element.classList.remove('is-scrolling');
           }
 
           if (lastScrollPos >= 100) {

@@ -18,8 +18,8 @@ html { font-size: $document-font-size; }
 @import "node_modules/bootstrap/scss/utilities/text";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/buttons";
-@import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/transitions";
 // NOTE: check Bootstrap 'scss' folder or docs for more available modules,
 // import only ones in use
 // @see https://getbootstrap.com/docs/4.1/getting-started/introduction/
@@ -29,3 +29,6 @@ html { font-size: $document-font-size; }
 
 // Custom classes
 @import "playground";
+
+// Pages
+@import "./pages/home";

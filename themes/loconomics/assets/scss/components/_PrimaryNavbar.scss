@@ -1,0 +1,75 @@
+/**
+ * PrimaryNavbar CSS component is the top fixed navbar with logo and user
+ * based navigation links.
+ */
+@import '../theme';
+@import "../../../../../node_modules/bootstrap/scss/navbar";
+@import "../../../../../node_modules/bootstrap/scss/nav";
+
+.PrimaryNavbar {
+    $scrollTransition: 800ms;
+
+    @extend .navbar;
+    @extend .navbar-expand-lg;
+    @extend .navbar-dark;
+
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+
+    padding: 1.8rem 4rem;
+
+    transition: background-color $scrollTransition;
+
+    a {
+        transition: color $scrollTransition;
+    }
+
+    .PrimaryNavbar-brand {
+        @extend .navbar-brand;
+
+        position: relative;
+    }
+
+    .PrimaryNavbar-altLogo {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity $scrollTransition;
+    }
+
+    .navbar-nav {
+        justify-content: end;
+        width: 100%;
+
+        .nav-item {
+            padding-left: 2em;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .navbar-collapse {
+            // Just below the button
+            text-align: right;
+            // If using default text-align (left), use next gap
+            //padding-top: 1em;
+        }
+    }
+
+    &.is-scrolling {
+        @extend .navbar-light;
+
+        background: white;
+
+        a {
+            color: $dark !important;
+        }
+
+        .PrimaryNavbar-altLogo {
+            opacity: 1;
+        }
+    }
+}
