@@ -12,4 +12,58 @@
     .HeroSection {
         background-image: url('../images/hero/hero1.jpg');
     }
+
+    #home-involved {
+        padding: 4rem;
+        background-image: url('../images/get-involved.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // Give room to let the background shine:
+        // As tall as the ratio of the image for the viewport width available
+        // (we ensure it shows as height as the image have)
+        // While on narrow desings with text content asking for bigger height
+        // the 'size cover' ensure to not let blank room.
+        // Source image: 1280px/600px*100
+        min-height: 46vw;
+        // In order to this height trick to work the sizing should compute the
+        // padding, so the Boostrap-reset default `box-sizing: border-box;`
+        // has cover us.
+        // Let's vertical align the Flexbox way
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3,
+        p {
+            color: #fff;
+            margin-bottom: 1.3rem;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        p {
+            max-width: 50%;
+        }
+
+        // White outline square buttons,
+        // with extra padding and gaps
+        .btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 0;
+            padding: 10px 35px;
+            margin: 0 4rem 0 0;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: rgba(0,0,0,0.3) !important;
+                outline: 0;
+            }
+        }
+
+    }
 }
