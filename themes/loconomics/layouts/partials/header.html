@@ -1,19 +1,28 @@
 <nav class="PrimaryNavbar">
     <a class="PrimaryNavbar-brand" href="#">
-        <img class="PrimaryNavbar-logo" src="/images/logos/loconomics-white.svg" height="75" alt="Loconomics Logo">
-        <img class="PrimaryNavbar-altLogo" src="/images/logos/loconomics-teal.svg" height="75" alt="Loonomics Logo" aria-hidden="true">
+        <img class="PrimaryNavbar-logo"
+          src="/images/logos/loconomics-white.svg"
+          alt="Loconomics Logo">
+        <img class="PrimaryNavbar-altLogo"
+          src="/images/logos/loconomics-teal.svg"
+          alt="Loonomics Logo"
+          aria-hidden="true">
     </a>
     <button class="navbar-toggler"
-        type="button" data-toggle="collapse"
-        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-        aria-expanded="false" aria-label="Toggle navigation">
+        type="button"
+        data-toggle="collapse"
+        data-target="navbar__nav-dropdown"
+        aria-controls="navbar__nav-dropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="navbarNavDropdown" class="navbar-collapse collapse">
+    <div id="navbar__nav-dropdown" class="navbar-collapse collapse">
+        <ul class="navbar-nav mr-auto"></ul>
         <ul class="navbar-nav">
           {{ range .Site.Menus.main }}
             <li class="nav-item">
-                <a class="nav-link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+                <a class="nav-link text-uppercase" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
             </li>
           {{ end }}
         </ul>

@@ -2,8 +2,9 @@
 title: Welcome to Loconomics
 description: Some Test Description
 hero:
-  title: Hero Title Goes here
-  description: Hero Description here
-  ctalabel: Click Me
-  url: /contact
+  title: Member-owned and Driven
+  description: Hero Description Text
+  cta:
+    label: join today
+    url: /about
 ---

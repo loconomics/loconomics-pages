@@ -37,6 +37,12 @@
         }
     }
 
+    /* Moved logo heights here out of template */
+    .PrimaryNavbar-logo
+    .PrimaryNavbar-altLogo {
+      height: 75px;
+    }
+
     .PrimaryNavbar-altLogo {
         position: absolute;
         left: 0;

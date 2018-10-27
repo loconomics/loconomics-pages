@@ -1,0 +1,19 @@
+<header>
+  {{ partial "header.html" . }}
+  <section class="HeroSection">
+    <div class="HeroSection--content">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col text-center">
+            <h1>{{ .Param "hero.title" }}</h1>
+            <h4>{{ .Param "hero.description" }}</h4>
+            <a class="btn btn-primary btn-cta-red text-uppercase"
+              href="{{ .Param "hero.cta.url" }}">
+                {{ .Param "hero.cta.label" }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
