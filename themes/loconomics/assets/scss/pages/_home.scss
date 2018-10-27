@@ -1,0 +1,87 @@
+/**
+ * Home page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/ServicesSection";
+@import "../components/SlideshowSection";
+@import "../components/CardSection";
+
+#home {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+
+    // NOTE: If this styles get larger or more sections are placed at this home file,
+    // then is better to move this whole to a _home-involved.scss file and same for
+    // other large chunks of code, then just import them at the top.
+    #home-involved {
+        padding: 4rem;
+        background-image: url('../images/get-involved.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // Give room to let the background shine:
+        // As tall as the ratio of the image for the viewport width available
+        // (we ensure it shows as height as the image have)
+        // While on narrow desings with text content asking for bigger height
+        // the 'size cover' ensure to not let blank room.
+        // Source image: 1280px/600px*100
+        min-height: 46vw;
+        // In order to this height trick to work the sizing should compute the
+        // padding, so the Boostrap-reset default `box-sizing: border-box;`
+        // has cover us.
+        // Let's vertical align the Flexbox way
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3,
+        p {
+            color: #fff;
+            margin-bottom: 1.3rem;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        p {
+            max-width: 50%;
+        }
+
+        // White outline square buttons,
+        // with extra padding and gaps
+        .btn {
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 0;
+            padding: 10px 35px;
+            margin: 0 4rem 0 0;
+            color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: rgba(0,0,0,0.3) !important;
+                outline: 0;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 2.5rem 3rem;
+
+            p {
+                max-width: 65%;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 2.5rem 1.5rem;
+
+            p {
+                max-width: 75%;
+            }
+        }
+    }
+}

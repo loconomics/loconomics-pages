@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "hugo serve",
+    "build": "hugo"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}

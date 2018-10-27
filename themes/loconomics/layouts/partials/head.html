@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Description }}
+      <meta name="description" content="{{ . }}">
+    {{ else }}
+      <meta name="description" content="{{ .Site.Params.site_description }}">
+    {{ end }}
+
+    {{ with .Site.Params.favicon }}
+		  <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
+   	  <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
+    {{ end }}
+
+    {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+    {{/* <!--  Vendor Scripts --> */}}
+    {{ $jquery := resources.Get "/js/vendor/jquery/jquery.min.js" }}
+    {{ $bootstrap := resources.Get "/js/vendor/bootstrap/bootstrap.min.js" }}
+    {{ $popper := resources.Get "/js/vendor/popper/popper.min.js" }}
+    {{ $common := resources.Get "/js/common.js" }}
+    {{ $slides := resources.Get "/js/slides.js" }}
+
+    {{ $script := slice $jquery $bootstrap $popper $common $slides | resources.Concat "/js/bundle.js" | minify | fingerprint }}
+    <script src="{{ $script.Permalink }}"></script>
+  </head>

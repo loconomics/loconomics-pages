@@ -1,0 +1,15 @@
+baseURL: https://loconomics.com/
+languageCode: en-us
+title: Loconomics
+theme: loconomics
+menu:
+  logo:
+  - logourl: /somewhere
+    url: #
+  main:
+  - name: about us
+    url: /about/
+  - name: sign up
+    url: #
+  - name: sign in
+    url: #

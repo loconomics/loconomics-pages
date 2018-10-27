@@ -1,0 +1,144 @@
+/**
+ * SlideshowSection CSS component: an horizontal section in the page
+ * showing one item at a time from a list (large slideshow).
+ */
+
+@import '../theme';
+
+.SlideshowSection {
+    // TODO: Should this become a global color, like a "highlight" or a Bootstrap semantic color?
+    $backColor: #287fc6;
+
+    background: $backColor;
+
+    h2 {
+        @extend .sr-only;
+    }
+
+    .SlideshowSection-content {
+        @extend .list-unstyled;
+        max-width: 1000px;
+        position: relative;
+        margin: 0;
+
+        > li {
+            // Hidden by default...
+            display: none;
+            // Except when is the current one
+            &[aria-current="true"] {
+                display: flex;
+            }
+
+            color: White;
+            align-items: center;
+
+            img {
+                height: 250px;
+            }
+
+            > div {
+                padding: 2rem 4rem;
+                max-width: 800px;
+            }
+
+            blockquote {
+                font-weight: bold;
+
+                &:before,
+                &:after {
+                    content: '"';
+                }
+            }
+
+            cite {
+                font-style: normal;
+
+                &:before {
+                    content: '\2014 \00A0';
+                }
+            }
+
+
+            @include media-breakpoint-down(md) {
+                > div {
+                    padding: 2rem 3rem;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                &[aria-current="true"] {
+                    display: block;
+                }
+
+                img {
+                    display: block;
+                    margin: auto;
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+
+    // Control buttons of the slideshow execution (prev and next buttons)
+    .SlideshowSection-controls {
+        > a {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+
+            /* Position the "next button" to the right */
+            &.SlideshowSection-next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            /* Position the "next button" to the left */
+            &.SlideshowSection-prev {
+                left: 0;
+                border-radius: 0 3px 3px 0;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            &:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+        }
+    }
+
+    // List of links to each slide
+    .SlideshowSection-index {
+        @extend .list-unstyled;
+
+        // Using a visual representation as dots for each link, hidding text just for screen readers
+        text-align: center;
+        position: relative;
+        bottom: 20px;
+        color: #fff;
+
+        > li > a {
+            @extend .sr-only;
+
+            // The dots/bullets/indicators
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            color: #fff;
+
+            &[aria-current="true"],
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}
