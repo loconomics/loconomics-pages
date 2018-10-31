@@ -1,9 +1,8 @@
 	{{ partial "head.html" . }}
 	<body id="{{ .Params.id }}">
-		{{ partial "hero.html" . }}
-		<main>
-			{{ .Content }}
-		</main>
-		{{ partial "footer.html" . }}
+			{{ partial "hero.html" . }}
+			{{ partial "three-columns-with-title.html" . }}
+			{{ partial "one-column-with-cta.html" . }}
+			{{ partial "footer.html" . }}
 	</body>
 </html>

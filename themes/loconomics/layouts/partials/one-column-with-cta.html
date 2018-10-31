@@ -1,0 +1,18 @@
+{{ $content := .Params.one_column_with_cta }}
+<section id="one-column-with-cta">
+  <div class="jumbotron no-margin involved">
+    <h3>{{ $content.title }}</h3>
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+           <p>{{ $content.description }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        {{ range $content.cta }}
+          <a href="{{ .url }}" class="btn btn-border-white">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
