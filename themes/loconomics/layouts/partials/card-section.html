@@ -1,0 +1,12 @@
+{{ if .Params.card_section }}
+{{ $content := .Params.card_section }}
+<section id="home-member-owned" class="CardSection">
+    <div class="CardSection-card">
+        <img src="images/member-owned.jpg" />
+        <div>
+            <h2>{{ $content.title }}</h2>
+            <p>{{ $content.description | safeHTML }}</p>
+        </div>
+    </div>
+</section>
+{{ end }}
