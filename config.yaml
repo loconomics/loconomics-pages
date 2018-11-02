@@ -13,3 +13,8 @@ menu:
     url: #
   - name: sign in
     url: #
+footer:
+  social:
+    - name: facebook
+      icon_path: img/icon.jpg
+      url: #

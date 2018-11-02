@@ -13,6 +13,7 @@
     // Image must be set by the page using this component using something like
     //background-image: url('../images/hero/hero1.jpg');
     // and too other images adjustments, like aligning or section height
+    background-image: url('../images/hero/hero1.jpg');
 
     // Layout
     display: flex;
@@ -41,23 +42,25 @@
         z-index: 2;
 
         > p {
-            font-size: 1.5rem;
-            color: White;
+          font-size: 1.5rem;
+          color: White;
         }
 
-        > a,
-        > button {
-            @extend .btn;
+        a,
+        button {
+          @extend .btn;
 
-            color: white;
-            background-color: #c44d52;
-            border: 0;
-            border-radius: 2px;
-            padding: 10px 35px;
+          color: white;
+          background-color: #ff0000;
+          border: 0;
+          border-radius: 2px;
+          padding: 10px 35px;
+          opacity: 0.95;
+          
+          &:hover {
+            opacity: 1;
 
-            &:hover {
-                opacity: 0.8;
-            }
+          }
         }
     }
 
