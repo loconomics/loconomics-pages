@@ -1,3 +1,5 @@
+{{ if .Params.slideshow }}
+{{ $content := .Params.slideshow }}
 <section id="home-testimonials" class="SlideshowSection">
     <h2>Testimonials</h2>
     <ul class="SlideshowSection-index">
@@ -6,40 +8,15 @@
         <li><a href="#3">Anahi Rojas</a></li>
     </ul>
     <ul class="SlideshowSection-content">
+        {{ range $content }}
         <li aria-current="true">
-            <img src="images/yavette-holts.jpg" />
+            <img src="{{ .image_path }}" />
             <div>
-                <blockquote>
-                    I like that I run my own business but have the support of Loconomics to keep my schedule flowing and organized.
-                </blockquote>
-                <cite>YaVette Holts, One Presence Massage</cite>
+                <blockquote>{{ .description }}</blockquote>
+                <cite>{{ .name }}, {{ .organization }}</cite>
             </div>
         </li>
-        <li>
-            <img src="images/yavette-holts.jpg" />
-            <div>
-                <blockquote>
-                    I love being part of something bigger and radical. Loconomics is bringing local service professionals together with a progressive team of
-                    technologists to facilitate our success. Even better, I share the profits and help influence decisions.
-                </blockquote>
-                <cite>Christopher Tellez, SF Reiki Center</cite>
-            </div>
-        </li>
-        <li>
-            <img src="images/yavette-holts.jpg" />
-            <div>
-                <blockquote>
-                    I've worked for 7 years in different cooperatives and am proud to be part of Loconomics.
-                    We work as a team and at the same time I can own my own business with the confidence that we share
-                    the profits of this platform with nobody else. We learn and share leadership positions,
-                    make decisions and grow personally.
-                </blockquote>
-                <cite>Anahi Rojas, Professional Eco-Cleaning</cite>
-            </div>
-        </li>
+        {{ end }}
     </ul>
-    <div class="SlideshowSection-controls">
-        <a class="SlideshowSection-prev" style="display: none">&#10094;</a>
-        <a class="SlideshowSection-next" style="display: none">&#10095;</a>
-    </div>
 </section>
+{{ end }}

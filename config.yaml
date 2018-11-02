@@ -18,3 +18,48 @@ footer:
     - name: facebook
       icon_path: img/icon.jpg
       url: #
+    - name: instagram
+      icon_path: img/icon.jpg
+      url: #
+    - name: twitter
+      icon_path: img/icon.jpg
+      url: #
+    - name: pinterest
+      icon_path: img/icon.jpg
+      url: #
+  row0:
+    - name: learn more
+      url: #
+      islink: true
+    - name: about us
+      url: #
+      islink: true
+    - name: download
+      url: #
+      islink: true
+    - name: press
+      url: #
+      islink: true
+    - name: help
+      url: #
+      islink: true
+    - name: terms & privacy
+      url: #
+      islink: true
+  row1:
+    - name: get in touch
+      url: #
+      islink: true
+    - name: (415) 602-9025
+      url: #
+      islink: true
+    - name: INFO@LOCONOMICS.COM
+      url: #
+      islink: true
+    - name: 3150 18TH STREET, SUITE 438 SAN FRANCISCO, CA 94111
+      url: #
+      islink: false
+  row2:
+    - name: follow us
+      url: #
+      islink: false
