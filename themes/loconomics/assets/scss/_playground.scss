@@ -212,6 +212,23 @@ p {
   animation-duration: 1.5s;
 }
 
+// hero background, will move elsewhere soon
+.hero-background-home {
+  background-image: url('../images/hero/hero1.jpg');
+}
+
+.hero-background-about {
+  background-image: url('../images/hero/hero2.jpg');
+}
+
+.hero-background-press {
+  background-image: url('../images/hero/hero3.jpg');
+}
+
+.background-get-involved {
+  background-image: url('../images/get-involved.jpg');
+}
+
 @-webkit-keyframes fader {
   from {opacity: .4}
   to {opacity: 1}

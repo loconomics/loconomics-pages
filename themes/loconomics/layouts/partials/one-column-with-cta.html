@@ -1,7 +1,7 @@
 {{ if .Params.one_column_with_cta }}
 {{ $content := .Params.one_column_with_cta }}
 <div id="home">
-  <section id="home-involved">
+  <section id="home-involved" class="{{ $content.background }}">
     <div class="jumbotron no-margin involved">
       <h3>{{ $content.title }}</h3>
       <div class="row">

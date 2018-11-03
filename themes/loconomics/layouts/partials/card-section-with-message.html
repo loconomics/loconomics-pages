@@ -1,0 +1,25 @@
+{{ if .Params.card_section_with_message }}
+{{ $content := .Params.card_section_with_message }}
+<section id="section-our-mission">
+    <div class="container-fluid arrow-box">
+        <div class="row h-100 border-padding">
+            <div class="col-xs-12 col-lg-4">
+                <img src="{{ $content.image_path }}" style="height: 400px" />
+            </div>
+            <div class="col-xs-12 col-lg-8 my-auto">
+                <h3>{{ $content.title }}</h3>
+                <p>{{ $content.description | safeHTML }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section-mission-subtext">
+    <div class="container-fluid" style="background-color: #297FB8; color:#fff;">
+        <div class="row">
+            <div class="container text-center section-container-padding">
+                <p class="color-white">{{ $content.message | safeHTML }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

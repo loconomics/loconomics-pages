@@ -1,0 +1,26 @@
+{{ if .Params.title_with_column_images }}
+{{ $content := .Params.title_with_column_images }}
+<section id="section-special-thanks">
+    <div class="container-fluid section-container-padding">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12 text-center section-title">
+                <h3>{{ $content.title }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <p class="color-gray">{{ $content.description }}</p>
+            </div>
+        </div>
+        <div class="container section-container-padding">
+            <div class="row text-center">
+              {{ range $content.images}}
+                <div class="col-xs-12 col-lg-3">
+                    <img src="{{ .image_path }}" style="max-width: 150px;"/>
+                </div>
+              {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

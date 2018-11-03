@@ -1,6 +1,6 @@
 <header>
   {{ partial "header.html" . }}
-  <section class="HeroSection">
+  <section class="HeroSection {{ .Param "hero.background" }}">
     <div class="HeroSection--content">
       <div class="container h-100">
         <div class="row align-items-center h-100">

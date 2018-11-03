@@ -13,7 +13,7 @@
     // Image must be set by the page using this component using something like
     //background-image: url('../images/hero/hero1.jpg');
     // and too other images adjustments, like aligning or section height
-    background-image: url('../images/hero/hero1.jpg');
+    //background-image: url('../images/hero/hero1.jpg');
 
     // Layout
     display: flex;
@@ -56,7 +56,7 @@
           border-radius: 2px;
           padding: 10px 35px;
           opacity: 0.95;
-          
+
           &:hover {
             opacity: 1;
 

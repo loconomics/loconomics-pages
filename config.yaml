@@ -27,7 +27,7 @@ params:
         image_path: /images/social/twitter.svg
         url: #
       - name: gplus
-        image_path: images/social/google.svg
+        image_path: /images/social/google.svg
         url: #
       - name: pinterest
         image_path: /images/social/pinterest.svg
