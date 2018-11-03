@@ -61,7 +61,7 @@ params:
       - name: INFO@LOCONOMICS.COM
         url: #
         islink: true
-      - name: 3150 18TH STREET, SUITE 438 SAN FRANCISCO, CA 94111
+      - name: 3150 18TH STREET, SUITE 438<br/>SAN FRANCISCO, CA 94111
         url: #
         islink: false
     row2:

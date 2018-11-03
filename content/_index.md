@@ -5,6 +5,7 @@ description: Some Test Description
 hero:
   title: Member-owned and Driven
   description: Hero Description Text
+  background: home
   cta:
     label: join today
     type: solid
