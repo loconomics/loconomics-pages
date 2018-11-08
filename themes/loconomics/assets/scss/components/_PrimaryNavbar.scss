@@ -7,7 +7,7 @@
 @import "../../../../../node_modules/bootstrap/scss/nav";
 
 .PrimaryNavbar {
-    $scrollTransition: 800ms;
+    $scroll-transition: 800ms;
 
     @extend .navbar;
     @extend .navbar-expand-lg;
@@ -21,10 +21,10 @@
 
     padding: 1.8rem 4rem;
 
-    transition: background-color $scrollTransition;
+    transition: background-color $scroll-transition;
 
     a {
-        transition: color $scrollTransition;
+        transition: color $scroll-transition;
     }
 
     .PrimaryNavbar-brand {
@@ -42,7 +42,7 @@
         left: 0;
         z-index: 1;
         opacity: 0;
-        transition: opacity $scrollTransition;
+        transition: opacity $scroll-transition;
     }
 
     .navbar-nav {
@@ -65,7 +65,7 @@
             // Prevent mixim links with back content on mobile when scroll on top (reset at is-scrolling)
             background-color: rgba(0, 0, 0, 0.4);
             // Apply transition to all, since the slide effect from Bootstrap uses transition too
-            transition: all $scrollTransition;
+            transition: all $scroll-transition;
         }
 
         .PrimaryNavbar-brand {

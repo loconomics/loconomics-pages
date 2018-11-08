@@ -9,19 +9,19 @@
     // TODO: Bootstrap defines $light variable for a common light gray, prefer to override
     // that color at theme.scss rather than create several versions (for consistency); it
     // evens defines 9 levels of gray $gray-100 to $gray-200 being $gray-100 used for $light
-    $outerColor: #f4f4f6;
-    $backColor: White;
-    $imgWidth: 420px;
-    $imgMdWidth: 330px;
-    $imgSmWidth: 240px;
+    $outer-color: #f4f4f6;
+    $back-color: White;
+    $img-width: 420px;
+    $img-md-width: 330px;
+    $img-sm-width: 240px;
 
     padding: 5rem 4rem;
-    background-color: $outerColor;
+    background-color: $outer-color;
 
     .CardSection-card {
         position: relative;
         overflow: hidden;
-        background-color: $backColor;
+        background-color: $back-color;
 
         // We want a 'cover' effect where the image taking the full height
         // of the card, without margin, and restricted width, respecting
@@ -41,8 +41,8 @@
 
         > div {
             padding: 2em 4em;
-            background: $backColor;
-            margin-left: $imgWidth;
+            background: $back-color;
+            margin-left: $img-width;
             position: relative;
             z-index: 2;
         }
@@ -58,12 +58,12 @@
         .CardSection-card {
             > img {
                 // Manually center the image in the 'viewport' it has (the $imgWidth)
-                $halfWidth: $imgWidth / 2;
-                transform: translateX(calc(#{$halfWidth} - 50%));
+                $half-width: $img-width / 2;
+                transform: translateX(calc(#{$half-width} - 50%));
             }
 
             > div {
-                margin-left: $imgMdWidth;
+                margin-left: $img-md-width;
             }
         }
     }
@@ -72,7 +72,7 @@
         padding: 1.6rem 3rem;
 
         .CardSection-card > div {
-            margin-left: $imgSmWidth;
+            margin-left: $img-sm-width;
         }
     }
 
