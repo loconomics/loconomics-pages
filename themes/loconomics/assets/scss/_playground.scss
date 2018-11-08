@@ -40,24 +40,6 @@ $color-blue: #287FC6;
 
 /// WIP
 
-/* Footer */
-.footer__container {
-    padding: 80px;
-    background-color: #007a7c;
-    color: #fff;
-    font-size: 0.8em;
-}
-
-.footer__container li {
-    margin: 10px 0;
-}
-
-.footer__container_social-icons img {
-  width: 1.25em;
-  margin-right: 10px;
-}
-
-
 @media screen and (max-width: 991px) {
   .img__container_eo-logo {
     text-align: center;
@@ -65,10 +47,6 @@ $color-blue: #287FC6;
 
   .text-responsive-left {
     text-align: center;
-  }
-
-  .footer__container_row ul li {
-      text-align: center;
   }
 }
 
@@ -134,9 +112,6 @@ p {
     padding: 70px 0;
 }
 
-
-
-
 .fader {
     -moz-transition: opacity 0.7s linear;
     -o-transition: opacity 0.7s linear;
@@ -147,22 +122,6 @@ p {
 .fader.fadedOut {
     opacity: 0;
     background-color: red;
-}
-
-.footer {
-    padding: 80px;
-    background-color: #007a7c;
-    color: #fff;
-    font-size: 0.8em;
-}
-
-.footer li {
-    margin: 10px 0;
-}
-
-.footer .social-icons img {
-  width: 20px;
-  margin-right: 10px;
 }
 
 .arrow-box {
@@ -239,9 +198,5 @@ p {
 
   .text-responsive-left {
     text-align: center;
-  }
-
-  .footer-row ul li {
-      text-align: center;
   }
 }
