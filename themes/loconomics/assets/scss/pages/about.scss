@@ -1,0 +1,89 @@
+/**
+ * About us page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/CardSection";
+@import "../components/Footer";
+@import "../mixims/triangle";
+
+ #about {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+
+    #about-our-mission {
+        background: White;
+    }
+
+    #about-mission-subtext {
+        position: relative;
+        background-color: #297FB8;
+
+        // TODO: Fix Triangle not working, the opposite-direction function fails :-/
+        &::before {
+            @include triangle(top);
+            position: absolute;
+            left: 50%;
+            top: 0;
+        }
+
+        p {
+            max-width: 67rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+    }
+
+    #about-team {
+        $content-color: #959595;
+        $img-color: #d3d3d3;
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 4.5rem 1.5rem 3rem;
+        }
+
+        ul {
+            @include list-unstyled;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 70rem;
+            margin: auto;
+
+            > li {
+                flex: 0 1 33%;
+                padding: 1.5rem;
+                min-width: 17rem;
+
+                > img,
+                > em {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 20rem;
+                    background: $img-color;
+                    display: block;
+                }
+
+                > h3 {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 2rem 0 0;
+                }
+
+                > p {
+                    color: $content-color;
+                }
+            }
+        }
+    }
+}
