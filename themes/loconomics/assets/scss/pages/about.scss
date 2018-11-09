@@ -26,12 +26,12 @@
         position: relative;
         background-color: #297FB8;
 
-        // TODO: Fix Triangle not working, the opposite-direction function fails :-/
         &::before {
-            @include triangle(top);
+            @include triangle(top, bottom, $color:#fff);
             position: absolute;
             left: 50%;
             top: 0;
+            transform: translateX(-50%);
         }
 
         p {

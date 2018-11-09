@@ -1,12 +1,14 @@
 // source: https://css-tricks.com/snippets/sass/css-triangle-mixin/
-@import '../functions/opposite-direction';
+// Updated to not use function opposite-direction, wasn't working, replacing
+// the $direction param with $from and $to
 
 /// Triangle helper mixin
-/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Direction} $from - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Direction} $to - Opposite of $from, either `top`, `right`, `bottom` or `left`
 /// @param {Color} $color [currentcolor] - Triangle color
 /// @param {Length} $size [1em] - Triangle size
-@mixin triangle($direction, $color: currentcolor, $size: 1em) {
-    @if not index(top right bottom left, $direction) {
+@mixin triangle($from, $to, $color: currentcolor, $size: 1em) {
+    @if not index(top right bottom left, $from) and not index(top right bottom left, $to) {
          @error "Direction must be either `top`, `right`, `bottom` or `left`.";
     }
 
@@ -14,14 +16,14 @@
     height: 0;
     content: '';
     z-index: 2;
-    border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+    border-#{$from}: ($size * 1.5) solid $color;
 
     $perpendicular-borders: $size solid transparent;
 
-    @if $direction == top or $direction == bottom {
+    @if $to == top or $to == bottom {
         border-left:   $perpendicular-borders;
         border-right:  $perpendicular-borders;
-    } @else if $direction == right or $direction == left {
+    } @else if $to == right or $to == left {
         border-bottom: $perpendicular-borders;
         border-top:    $perpendicular-borders;
     }
