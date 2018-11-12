@@ -8,12 +8,3 @@
  * Overrides to global variables should be done directly at theme.scss even if just
  * testing.
  */
-
-/// Custom resets (remember we have loaded Bootstrap4-reboot styles)
-
-// TODO: Review, this change is too global, should be a Bootstrap variable change
-// if exist or a reset at main.scss if really should be global, or scoped into a
-// section/component/page otherwise
-p {
-    color: #959595;
-}
