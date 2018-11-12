@@ -5,7 +5,9 @@
 			{{ partial "hero.html" . }}
 		</header>
 		<main>
-			{{ .Content }}
+			<section id="press-index">
+				{{ partial "news-index.html" . }}
+			</section>
 		</main>
 		{{ partial "footer.html" . }}
 	</body>

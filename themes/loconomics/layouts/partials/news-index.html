@@ -1,0 +1,15 @@
+<ul>
+    {{ range .Params.news }}
+    <li>
+        {{ if .imagePath }}
+        <img aria-hidden="true" src="/images/press/{{ .imagePath }}" />
+        {{ else }}
+        <img aria-hidden="true" src="{{ .imageUrl }}" />
+        {{ end }}
+        <a target="_blank" href="{{ .url }}">
+            {{ .title }}
+        </a>
+        <p>{{ .author }} | {{ .source }} | <time datetime="{{ .date }}">{{ dateFormat "Jan 2, 2006" .date }}</time></p>
+    </li>
+    {{ end }}
+</ul>

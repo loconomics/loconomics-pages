@@ -5,6 +5,8 @@
         </header>
         <main>
             {{- block "main" . }}{{- end }}
+
+  {{ partial "news.html" . }}
         </main>
         {{- partial "footer.html" . -}}
     </body>
