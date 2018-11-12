@@ -11,13 +11,6 @@
 
 /// Custom resets (remember we have loaded Bootstrap4-reboot styles)
 
-// TODO: Review, I vote to remove this since Bootstrap have a variable for this ($link-color)
-// that applies properly and without the 'important' modifier --that will cause problems;
-// I prefer we set links to white just in the cases we really want that, and keep others
-// in the default ('primary') color. Some usages of links mixed with text without differentiation
-// could lead to a an accessibility issue.
-a { color: #fff !important; }
-
 // TODO: Review, this change is too global, should be a Bootstrap variable change
 // if exist or a reset at main.scss if really should be global, or scoped into a
 // section/component/page otherwise
