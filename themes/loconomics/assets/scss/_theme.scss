@@ -10,10 +10,15 @@
 // Custom global variables
 $logo-color: rgb(0, 122, 124);
 $document-font-size: 18px;
+// A background for a highlighted area, like the SlideshowSection.
+// TODO: Should we replace a Bootstrap semantic color with this? (like info, primary, secondary, success)
+$bg-highlight: rgb(40, 127, 198);
 
 // Bootstrap variables overrides (before loading any Bootstrap file)
 $font-family-sans-serif: 'Nunito Sans', Arial, Helvetica, sans-serif;
 $primary: $logo-color;
+// overwrite light (=$gray-100) with a similar from the design
+$gray-100: rgb(244, 244, 246);
 // Required Bootstrap base files (don't produce output)
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";

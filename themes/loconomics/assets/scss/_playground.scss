@@ -19,17 +19,6 @@ ul { list-style: none; }
 // could lead to a an accessibility issue.
 a { color: #fff !important; }
 
-/// Color classes utilities
-// TODO: Prefer semantic names
-// TODO: Bootstrap defines $light variable for a common light gray, prefer to override
-// that color at theme.scss rather than create several versions (for consistency); it
-// evens defines 9 levels of gray $gray-100 to $gray-200 being $gray-100 used for $light
-$color-lightgray: #f4f4f6;
-// TODO: Bootstrap defines a $blue and the semantic color $primary (defaults to $blue),
-// being semantic names preferred. Then, if this blue color is the same wanted as general
-// primary color, should be overrided at theme.scss and use the Bootstrap class utility.
-$color-blue: rgb(40, 127, 198);
-
 // TODO: Review, this change is too global, should be a Bootstrap variable change
 // if exist or a reset at main.scss if really should be global, or scoped into a
 // section/component/page otherwise

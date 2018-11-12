@@ -6,10 +6,7 @@
 @import '../theme';
 
 .CardSection {
-    // TODO: Bootstrap defines $light variable for a common light gray, prefer to override
-    // that color at theme.scss rather than create several versions (for consistency); it
-    // evens defines 9 levels of gray $gray-100 to $gray-200 being $gray-100 used for $light
-    $outer-color: #f4f4f6;
+    $outer-color: $light;
     $back-color: White;
     $img-width: 420px;
     $img-md-width: 330px;

@@ -6,10 +6,7 @@
 @import '../theme';
 
 .SlideshowSection {
-    // TODO: Should this become a global color, like a "highlight" or a Bootstrap semantic color?
-    $back-color: #287fc6;
-
-    background: $back-color;
+    background: $bg-highlight;
 
     h2 {
         @extend .sr-only;
