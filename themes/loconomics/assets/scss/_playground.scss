@@ -10,8 +10,7 @@
  */
 
 /// Custom resets (remember we have loaded Bootstrap4-reboot styles)
-// TODO: Should we reset this or just use list-unstyled class on wanted elements?
-ul { list-style: none; }
+
 // TODO: Review, I vote to remove this since Bootstrap have a variable for this ($link-color)
 // that applies properly and without the 'important' modifier --that will cause problems;
 // I prefer we set links to white just in the cases we really want that, and keep others

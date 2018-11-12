@@ -55,7 +55,7 @@
         }
 
         ul {
-            @include list-unstyled;
+            @extend .list-unstyled;
 
             display: flex;
             flex-wrap: wrap;
@@ -104,6 +104,8 @@
         }
 
         ul {
+            @extend .list-unstyled;
+
             display: flex;
             flex-wrap: wrap;
             padding: 2rem;
