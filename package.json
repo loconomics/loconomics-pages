@@ -2,9 +2,13 @@
   "private": true,
   "scripts": {
     "start": "hugo serve",
-    "build": "hugo"
+    "build": "hugo",
+    "optimize-images:press": "node ./tasks/optimize-images.js"
   },
   "dependencies": {
     "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.21.0"
   }
 }
