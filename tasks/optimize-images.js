@@ -1,64 +1,73 @@
 /**
- * Task script to optimize project images by:
- * - reducing too large images (based on purpose)
- * - re-compress
+ * Task CLI module performing optimizations of images with presets,
+ * using the optimize-images-lib module.
  */
 'use strict';
 
-const sharp = require('sharp');
-const fs = require('fs');
+const optimizeImages = require('./optimize-images-lib');
 const path = require('path');
 
-const maxWidth = 1008;
-const maxHeight = 796;
-const inputFolder = __dirname + '/../themes/loconomics/static/images/press/';
-const outputFolder = __dirname + '/../themes/loconomics/static/images/press/optimized/';
-const extensions = ['.jpg', '.jpeg', '.png'];
+const settings = {
+    press: {
+        maxSize: {
+            width: 1008,
+            height: 796
+        },
+        source: path.join(__dirname, '/../themes/loconomics/static/images/press/'),
+        destination: path.join(__dirname, '/../themes/loconomics/static/images/press/'),
+        extensions: ['.jpg', '.jpeg', '.png']
+    }
+};
 
-fs.readdir(inputFolder, async (err, files) => {
-    if (err) {
-        console.error(err);
+const task = process.argv[2];
+if (!task || !settings.hasOwnProperty(task)) {
+    console.error('Must provide a task name from:', Object.keys(settings));
+    process.exit(1);
+}
+else {
+    run(settings[task]);
+}
+
+async function run(settings) {
+    try {
+        console.log('Optimizing files from', settings.source);
+        const results = await optimizeImages(settings);
+        let delta = 0;
+        results.forEach((result) => {
+            const outSize = result.wasOptimized ? result.optimizedSize : result.originalSize;
+            const source = path.relative(settings.source, result.source);
+            const destination = path.relative(settings.source, result.destination);
+            const fileDelta = result.originalSize - result.optimizedSize;
+            delta += Math.max(0, fileDelta);
+            console.log(`${source} ${prettyDelta(fileDelta)} ${prettyKB(result.originalSize)} -> ${prettyKB(outSize)} ${destination}`);
+        });
+        console.log(`Processed ${results.length} files with a full reduction of ${prettyDelta(delta)}`);
+    }
+    catch (ex) {
+        console.error(ex);
+    }
+}
+
+function prettyKB(sizeInBytes) {
+    if (!sizeInBytes) return 'NONE';
+    // Converted bytes into KB and rounded up to two decimals
+    const kb = Math.round((sizeInBytes / 1024) * 100) / 100;
+    return kb + 'KB';
+}
+
+const Reset = "\x1b[0m";
+const FgRed = "\x1b[31m";
+const FgGreen = "\x1b[32m";
+const FgYellow = "\x1b[33m";
+
+function prettyDelta(sizeInBytes) {
+    if (sizeInBytes === 0) {
+        return FgYellow + 'SAME' + Reset;
+    }
+    else if (sizeInBytes < 0) {
+        return FgRed + prettyKB(sizeInBytes) + Reset;
     }
     else {
-        try {
-            await Promise.all(files.map(optimizeFile));
-            console.log(`Optimized ${files.length} files`);
-        }
-        catch (ex) {
-            console.error(ex);
-        }
+        return FgGreen + prettyKB(sizeInBytes) + Reset;
     }
-});
-
-async function optimizeFile(fileName) {
-    if (!extensions.includes(path.extname(fileName))) {
-        return null;
-    }
-    const filePath = path.join(inputFolder, fileName);
-    console.log('Optimizing:', filePath);
-    return await sharp(filePath)
-    // "outside" is like 'cover' in CSS (background or object-fit;
-    // the "Sharp" option named "cover" does a crop too)
-    .resize(maxWidth, maxHeight, {
-        fit: 'outside',
-        withoutEnlargement: true
-    })
-    .jpeg({
-        quality: 75,
-        progressive: true,
-        chromaSubsampling: '4:4:4',
-        // Do this compression only if source is jpeg, otherwise does nothing
-        force: false
-    })
-    .png({
-        progressive: true,
-        compressionLevel: 9,
-        // Do this compression only if source is png, otherwise does nothing
-        force: false
-    })
-    // By saving to file, Sharp by default does:
-    // "strip all metadata and convert to the device-independent sRGB colour space."
-    // "This will also convert to and add a web-friendly sRGB ICC profile"
-    // @see http://sharp.pixelplumbing.com/en/stable/api-output/#withmetadata
-    .toFile(path.join(outputFolder, fileName));
 }

@@ -3,7 +3,7 @@
   "scripts": {
     "start": "hugo serve",
     "build": "hugo",
-    "optimize-images:press": "node ./tasks/optimize-images.js"
+    "optimize-images:press": "node ./tasks/optimize-images.js press"
   },
   "dependencies": {
     "bootstrap": "^4.1.3"
