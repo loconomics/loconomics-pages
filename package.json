@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "start": "hugo serve",
-    "build": "hugo"
+    "build": "hugo",
+    "optimize-images:press": "imagemin ./themes/loconomics/static/images/press/* --out-dir=./themes/loconomics/static/images/press/"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3"
+    "bootstrap": "^4.1.3",
+    "imagemin-cli": "^3.0.0"
   }
 }
