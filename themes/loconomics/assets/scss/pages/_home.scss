@@ -86,4 +86,17 @@
             }
         }
     }
+    .GrowthSection {
+        .GrowthSection-content {
+            background-color: rgba(0,0,0,.4);
+            width: 50%; 
+            padding: 2em 4em;
+            @include media-breakpoint-down(md) {
+                width: 100%; 
+            }
+            p {
+                max-width: 0%;
+            }
+        }
+    }
 }
