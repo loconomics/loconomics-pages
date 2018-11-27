@@ -1,0 +1,14 @@
+/**
+ * Accessibility Policy page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/Footer";
+@import "../components/LegalArticle";
+
+ #accessibility-policy {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+ }
