@@ -19,17 +19,6 @@
     // other large chunks of code, then just import them at the top.
     #home-involved {
         padding: 4rem;
-        background-image: url('../images/get-involved.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        // Give room to let the background shine:
-        // As tall as the ratio of the image for the viewport width available
-        // (we ensure it shows as height as the image have)
-        // While on narrow desings with text content asking for bigger height
-        // the 'size cover' ensure to not let blank room.
-        // Source image: 1280px/600px*100
-        min-height: 46vw;
         // In order to this height trick to work the sizing should compute the
         // padding, so the Boostrap-reset default `box-sizing: border-box;`
         // has cover us.
@@ -85,18 +74,40 @@
                 max-width: 75%;
             }
         }
-    }
-    .GrowthSection {
-        .GrowthSection-content {
+
+        ///
+        /// Background and shadow
+        position: relative;
+        // Give room to let the background shine:
+        // As tall as the ratio of the image for the viewport width available
+        // (we ensure it shows as height as the image have)
+        // While on narrow desings with text content asking for bigger height
+        // the 'size cover' ensure to not let blank room.
+        // Source image: 1280px/600px*100
+        min-height: 46vw;
+        // Prepare layers for background and shadow
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        // Set-up background at first layer
+        &:before {
+            // Default color take from the image while that is loading or failed
+            background-color: #9BA463;
+            background-image: url('../images/get-involved.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        // Shadow overlay to make white text more legible over the background image
+        &:after {
             background-color: rgba(0,0,0,.4);
-            width: 50%; 
-            padding: 2em 4em;
-            @include media-breakpoint-down(md) {
-                width: 100%; 
-            }
-            p {
-                max-width: 0%;
-            }
         }
     }
 }
