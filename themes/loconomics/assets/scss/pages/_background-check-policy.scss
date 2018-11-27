@@ -1,0 +1,14 @@
+/**
+ * Background Check Policy page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/Footer";
+@import "../components/LegalArticle";
+
+ #background-check-policy {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+ }
