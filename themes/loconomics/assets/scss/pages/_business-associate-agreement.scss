@@ -1,0 +1,14 @@
+/**
+ * Business Associate Agreement page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/Footer";
+@import "../components/LegalArticle";
+
+ #business-associate-agreement {
+    .HeroSection {
+        background-image: url('../images/hero/hero1.jpg');
+    }
+ }

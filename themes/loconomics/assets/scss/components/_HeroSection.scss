@@ -35,10 +35,17 @@
     .HeroSection--content {
         width: 100%;
         color: White;
-        padding: ($grid-gutter-width / 2);
+        padding: 0 1.5rem;
         // On top of the background overlay
         position: relative;
         z-index: 2;
+        max-width: 60rem;
+        margin: auto;
+
+        @include media-breakpoint-down(md) {
+            // Prevent to overlay the top fixed navbar
+            padding-top: 70px;
+        }
 
         > p {
             font-size: 1.5rem;
