@@ -30,7 +30,10 @@
             align-items: center;
 
             img {
-                height: 250px;
+                height: 14rem;
+                flex: 14rem 0 0;
+                object-fit: cover;
+                box-sizing: content-box;
             }
 
             > div {
