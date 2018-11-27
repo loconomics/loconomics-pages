@@ -3,6 +3,7 @@
   "scripts": {
     "start": "hugo serve",
     "build": "hugo",
+    "clean": "rm -rf public",
     "optimize-images:press": "node ./tasks/optimize-images.js press"
   },
   "dependencies": {

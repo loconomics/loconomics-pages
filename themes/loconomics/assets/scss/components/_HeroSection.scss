@@ -58,11 +58,8 @@
         > a,
         > button {
             @extend .btn;
+            @extend .btn-secondary;
 
-            color: white;
-            background-color: #c44d52;
-            border: 0;
-            border-radius: 2px;
             padding: 10px 35px;
 
             &:hover {
