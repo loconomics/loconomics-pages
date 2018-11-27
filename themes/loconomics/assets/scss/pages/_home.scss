@@ -107,7 +107,11 @@
         }
         // Shadow overlay to make white text more legible over the background image
         &:after {
-            background-color: rgba(0,0,0,.4);
+            // For full overlay:
+            //background-color: rgba(0,0,0,.4);
+            // Overlay just on the text, smooth transition to not overlay on the right
+            // where there is only image (text limited to the left half)
+            background-image: linear-gradient(to right, rgba(0,0,0,.54), rgba(0,0,0,0));
         }
     }
 }
