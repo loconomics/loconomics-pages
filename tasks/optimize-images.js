@@ -1,6 +1,9 @@
 /**
  * Task CLI module performing optimizations of images with presets,
  * using the optimize-images-lib module.
+ *
+ * @example node ./optimize-images press
+ * @example node ./optimize-images hero
  */
 'use strict';
 
@@ -16,7 +19,16 @@ const settings = {
         source: path.join(__dirname, '/../themes/loconomics/static/images/press/'),
         destination: path.join(__dirname, '/../themes/loconomics/static/images/press/'),
         extensions: ['.jpg', '.jpeg', '.png']
-    }
+    },
+    hero: {
+        maxSize: {
+            width: 1920,
+            height: 1280
+        },
+        source: path.join(__dirname, '/../themes/loconomics/static/images/hero/'),
+        destination: path.join(__dirname, '/../themes/loconomics/static/images/hero/'),
+        extensions: ['.jpg']
+    },
 };
 
 const task = process.argv[2];

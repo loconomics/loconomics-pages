@@ -4,7 +4,8 @@
     "start": "hugo serve",
     "build": "hugo",
     "clean": "rm -rf public",
-    "optimize-images:press": "node ./tasks/optimize-images.js press"
+    "optimize-images:press": "node ./tasks/optimize-images press",
+    "optimize-images:hero": "node ./tasks/optimize-images hero"
   },
   "dependencies": {
     "bootstrap": "^4.1.3"
