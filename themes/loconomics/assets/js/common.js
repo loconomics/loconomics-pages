@@ -2,7 +2,7 @@
 (function(global) {
 
   window.addEventListener('DOMContentLoaded', function () {
-      const list = ['/images/hero/hero2.jpg', '/images/hero/hero3.jpg', '/images/hero/hero1.jpg'];
+      const list = ['/images/hero/home2.jpg', '/images/hero/home3.jpg', '/images/hero/home1.jpg'];
       const hero = document.querySelector('#home .HeroSection');
       let i = 0;
       if (hero) {
@@ -28,10 +28,6 @@
           }
           else {
             element.classList.remove('is-scrolling');
-          }
-
-          if (lastScrollPos >= 100) {
-            //element.classList.toggle("fadeOut");
           }
           ticking = false;
         });
