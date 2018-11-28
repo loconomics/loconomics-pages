@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * Tool to optimize images by:
  * - reducing too large images
@@ -10,6 +11,18 @@
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
+
+/**
+ * @typedef {Object} Size
+ * @property {number} width
+ * @property {number} height
+ */
+
+/**
+ * @typedef {Object} SharpBufferAndInfo
+ * @property {Buffer} data
+ * @property {sharp.OutputInfo} info
+ */
 
 /**
  * @typedef {Object} FileOptimizationResult
@@ -25,11 +38,11 @@ const path = require('path');
 
 /**
  * @param {Object} settings
- * @param {Size} maxSize Object with width and height properties for maximum allowed
+ * @param {Size} settings.maxSize Object with width and height properties for maximum allowed
  * image size
- * @param {string} source Folder
- * @param {string} destionation Folder
- * @param {Array<string>} extensions List of allowed extensions to be processed
+ * @param {string} settings.source Folder
+ * @param {string} settings.destination Folder
+ * @param {Array<string>} settings.extensions List of allowed extensions to be processed
  * @returns {Promise<Array<FileOptimizationResult>>} Set of results per file,
  * containing as much as processed files (excluded ones per extensions list are
  * excluded here too)
@@ -54,8 +67,8 @@ module.exports = async function optimize({ maxSize, source, destination, extensi
 /**
  * Perform size optimizations in a file opened as a Sharp instance,
  * returning the resulting data as buffer plus info like final size
- * @param {sharp} file
- * @returns {Promise<Object>} With data {Buffer} and info {Object}
+ * @param {sharp.Sharp} file
+ * @returns {Promise<SharpBufferAndInfo>}
  */
 async function optimizeFile(file, maxSize) {
     // Scale and re-compress file
@@ -88,8 +101,8 @@ async function optimizeFile(file, maxSize) {
 
 /**
  * Save at outPath the smaller file comparing original and optimized
- * @param {sharp.metadata} original
- * @param {sharp.bufferAndInfo} result Optimizatino result, with processed bytes
+ * @param {sharp.Metadata} original
+ * @param {SharpBufferAndInfo} result Optimization result, with processed bytes
  * as data property, metadata at info.
  * @param {string} filePath
  * @param {string} outPath
@@ -165,6 +178,7 @@ function readdir(path) {
 /**
  * Promisified version of fs.readFile
  * @param {string} path
+ * @param {Object} [options] Pass through to fs.readFile
  * @returns {Promise<(string|Buffer),Error>} Returns file content
  */
 function readFile(path, options) {
