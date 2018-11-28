@@ -31,3 +31,17 @@ Content is stored below [content/](content/). Since we're putting static pages u
 Hugo has a [pipes feature](https://gohugo.io/hugo-pipes/) that lets us integrate various forms of asset processing. Essentially, anything under [assets](assets/) is processed and can be included in layouts. See the `<head>` section in [layouts/_default/baseof.html](layouts/_default/baseof.html) for an example of how to do this.
 
 But, in general, [assets/main.scss](assets/main.scss) imports Bootstrap 4's SCSS files ande lets you override their defaults, add additional styles, etc. Feel free to incorporate other asset types, or ask me if something is needed and I'll take a crack at it.
+
+## CSS Coding Style and Conventions
+
+We use the [guidelines specified at the original project](https://github.com/loconomics/loconomics/blob/master/docs/Contributor%20Guidelines.md)
+as a base here plus specifics for SASS, in short:
+
+- All source files use 4 spaces indentation.
+- UTF8 file encoding.
+- [SUIT naming convention](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) for classes.
+- Source wrote with SASS using the SCSS syntax and file extension.
+- [SASS Guidelin styleguide](https://sass-guidelin.es/).
+  - **Note:** This styleguide specifies 2 spaces indentation but we use 4 to keep consistent with the whole project.
+
+Check discussion details about the topic at the [CSS Styling issue](https://github.com/loconomics/loconomics-pages/issues/20) and post there any question or request.
