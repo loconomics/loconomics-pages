@@ -6,7 +6,7 @@
     "clean": "rm -rf public",
     "optimize-images:press": "node ./tasks/optimize-images press",
     "optimize-images:hero": "node ./tasks/optimize-images hero",
-    "push-to-backend": "cross-var rm -rf \"$LC_BACKEND_DIR/public/\" && cp public \"$LC_BACKEND_DIR\" -r",
+    "push-to-backend": "cross-var rm -rf \"$LC_BACKEND_DIR/public/\" && cross-var cp public \"$LC_BACKEND_DIR\" -r",
     "release": "npm run clean && npm run build && npm run push-to-backend"
   },
   "dependencies": {
