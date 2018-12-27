@@ -2,3 +2,5 @@ baseURL: https://loconomics.com/
 languageCode: en-us
 title: Loconomics
 theme: loconomics
+canonifyURLs: false
+relativeURLs: true
