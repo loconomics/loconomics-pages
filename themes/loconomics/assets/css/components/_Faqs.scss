@@ -6,6 +6,8 @@
 @import '../theme';
 
 .Faqs {
+    $tran-duration: 400ms;
+
     dl {
         padding: 0;
         margin: 0;
@@ -22,9 +24,9 @@
         &::before {
             content: '-';
             color: #2a7fb5;
-            font-size: 1.3em;
-            margin-right: 1.3em;
-            width: 1em;
+            font-size: 1.3rem;
+            margin-right: 1.3rem;
+            width: 1rem;
             text-align: center;
             display: inline-block;
         }
@@ -36,7 +38,26 @@
 
     dd {
         display: block;
-        margin-left: 3.3em;
-        padding: .6rem 2rem 2rem;
+        margin: .6rem 2rem 2rem 4.3rem;
+        // Never will reach this height, is just to enable transition to it
+        // (cannot be done with height cause of content calculated size)
+        max-height: 900px;
+        // It's important we use an easing that allow us to prevent delays caused
+        // by the extra unneeded height, and so we use the inverted one when hidden
+        // (it's a workaround for the bad side effect of this technique)
+        // but only on the max-height
+        transition: max-height $tran-duration cubic-bezier(1,0,1,0),
+                    margin $tran-duration;
+        overflow: hidden;
+
+        &[hidden] {
+            display: block !important;
+            // Both height and margins must collapse
+            max-height: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            transition: max-height $tran-duration cubic-bezier(0,1,0,1),
+                        margin $tran-duration;
+        }
     }
 }
