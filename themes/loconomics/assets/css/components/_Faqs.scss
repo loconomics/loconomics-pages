@@ -21,6 +21,10 @@
         color: $black;
         border-bottom: 1px solid $gray-300;
 
+        &:last-of-type {
+            border-bottom: none;
+        }
+
         &::before {
             content: '-';
             color: #2a7fb5;
