@@ -1,0 +1,17 @@
+/**
+ * HeroButton CSS component: a custom buttom based on Bootstrap secondary with
+ * extra size and effect.
+ */
+
+@import '../theme';
+
+.HeroButton {
+    @extend .btn;
+    @extend .btn-secondary;
+
+    padding: 10px 35px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

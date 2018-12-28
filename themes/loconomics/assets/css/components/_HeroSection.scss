@@ -4,6 +4,7 @@
  */
 
 @import '../theme';
+@import './_HeroButton';
 
 .HeroSection {
     background-repeat: no-repeat;
@@ -57,14 +58,7 @@
 
         > a,
         > button {
-            @extend .btn;
-            @extend .btn-secondary;
-
-            padding: 10px 35px;
-
-            &:hover {
-                opacity: 0.8;
-            }
+            @extend .HeroButton;
         }
     }
 
