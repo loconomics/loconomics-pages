@@ -27,7 +27,8 @@
     {{ $popper := resources.Get "/js/vendor/popper/popper.min.js" }}
     {{ $common := resources.Get "/js/common.js" }}
     {{ $slides := resources.Get "/js/slides.js" }}
+    {{ $faqs := resources.Get "/js/faqs.js" }}
 
-    {{ $script := slice $jquery $bootstrap $popper $common $slides | resources.Concat "/js/bundle.js" | minify | fingerprint }}
+    {{ $script := slice $jquery $bootstrap $popper $common $slides $faqs | resources.Concat "/js/bundle.js" | minify | fingerprint }}
     <script src="{{ $script.RelPermalink }}"></script>
   </head>
