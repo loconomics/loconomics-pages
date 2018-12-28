@@ -1,0 +1,36 @@
+/**
+ * FAQs CSS component: contains a definition list with questions and answers,
+ * where answers are initially collapsed
+ */
+
+@import '../theme';
+
+.Faqs {
+    dt {
+        font-weight: 600;
+        display: block;
+        padding: .6rem 2rem;
+        cursor: pointer;
+        color: $black;
+        border-bottom: 1px solid $gray-300;
+
+        &::before {
+            content: '+';
+            color: #2a7fb5;
+            font-size: 1.3em;
+            margin-right: 1.3em;
+            width: 1em;
+            display: inline-block;
+
+            &[aria-expanded] {
+                content: '-';
+            }
+        }
+    }
+
+    dd {
+        display: block;
+        margin-left: 3.3em;
+        padding: .6rem 2rem 2rem;
+    }
+}

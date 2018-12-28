@@ -1,0 +1,20 @@
+/**
+ * Help page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/Faqs";
+@import "../components/Footer";
+
+#help {
+    .HeroSection {
+        background-image: url('../images/hero/help.jpg');
+    }
+
+    .Faqs {
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+        max-width: 65rem;
+    }
+}
