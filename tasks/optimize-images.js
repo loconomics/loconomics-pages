@@ -29,6 +29,15 @@ const settings = {
         destination: path.join(__dirname, '/../themes/loconomics/static/images/hero/'),
         extensions: ['.jpg']
     },
+    bio: {
+        maxSize: {
+            width: 720,
+            height: 720
+        },
+        source: path.join(__dirname, '/../themes/loconomics/static/images/bio/'),
+        destination: path.join(__dirname, '/../themes/loconomics/static/images/bio/'),
+        extensions: ['.jpg']
+    },
 };
 
 const task = process.argv[2];
