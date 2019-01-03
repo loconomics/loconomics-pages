@@ -30,7 +30,6 @@
             color: White;
 
             > img {
-                height: 14rem;
                 flex: 14rem 0 0;
                 object-fit: cover;
                 box-sizing: content-box;
@@ -38,11 +37,13 @@
 
             > div {
                 align-self: center;
-                padding: 2rem 1.5rem 2rem 4rem;
+                padding: 2rem 3rem;
                 max-width: 45rem;
+                margin: auto;
 
                 > blockquote {
                     font-weight: bold;
+                    text-align: justify;
 
                     &:before,
                     &:after {
@@ -61,26 +62,38 @@
 
             // An embedded video from external ressource, using iframe
             > iframe {
-                padding-right: 1.5rem;
+                padding-right: 1.6rem;
                 height: auto;
                 width: auto;
             }
 
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
+                > img {
+                    flex: 12rem 0 0;
+                }
+
                 > div {
-                    padding: 2rem 3rem;
+                    padding: 2rem 1.7rem;
                 }
             }
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 &[aria-current="true"] {
                     display: block;
                 }
 
                 > img {
+                    height: 14rem;
                     display: block;
                     margin: auto;
                     padding-top: 2rem;
+                }
+
+                > iframe {
+                    display: block;
+                    margin: auto;
+                    padding-bottom: 2rem;
+                    padding-right: 0;
                 }
             }
         }
@@ -96,7 +109,7 @@
             width: auto;
             display: flex;
             align-items: center;
-            padding: 16px;
+            padding: 0.6rem;
             color: white;
             font-weight: bold;
             font-size: 18px;
