@@ -17,7 +17,7 @@
    	  <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
 
-    {{ $styles := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
+    {{ $styles := resources.Get "css/main.scss" | toCSS | resources.PostCSS (dict "use" "autoprefixer" "noMap" true) | minify | fingerprint }}
 
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
