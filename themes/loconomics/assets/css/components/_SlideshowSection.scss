@@ -15,7 +15,6 @@
 
     .SlideshowSection-content {
         @extend .list-unstyled;
-        max-width: 1000px;
         position: relative;
         margin: 0;
 
@@ -27,54 +26,76 @@
                 display: flex;
             }
 
+            max-width: 85rem;
+            margin: auto;
+            align-items: stretch;
             color: White;
-            align-items: center;
 
-            img {
-                height: 14rem;
+            > img {
                 flex: 14rem 0 0;
                 object-fit: cover;
                 box-sizing: content-box;
             }
 
             > div {
-                padding: 2rem 4rem;
-                max-width: 800px;
-            }
+                align-self: center;
+                padding: 2rem 3rem;
+                max-width: 45rem;
+                margin: auto;
 
-            blockquote {
-                font-weight: bold;
+                > blockquote {
+                    font-weight: bold;
+                    text-align: justify;
 
-                &:before,
-                &:after {
-                    content: '"';
+                    &:before,
+                    &:after {
+                        content: '"';
+                    }
+                }
+
+                > cite {
+                    font-style: normal;
+
+                    &:before {
+                        content: '\2014 \00A0';
+                    }
                 }
             }
 
-            cite {
-                font-style: normal;
-
-                &:before {
-                    content: '\2014 \00A0';
-                }
+            // An embedded video from external ressource, using iframe
+            > iframe {
+                padding-right: 1.6rem;
+                height: auto;
+                width: auto;
             }
 
+            @include media-breakpoint-down(lg) {
+                > img {
+                    flex: 12rem 0 0;
+                }
+
+                > div {
+                    padding: 2rem 1.7rem;
+                }
+            }
 
             @include media-breakpoint-down(md) {
-                > div {
-                    padding: 2rem 3rem;
-                }
-            }
-
-            @include media-breakpoint-down(sm) {
                 &[aria-current="true"] {
                     display: block;
                 }
 
-                img {
+                > img {
+                    height: 14rem;
                     display: block;
                     margin: auto;
                     padding-top: 2rem;
+                }
+
+                > iframe {
+                    display: block;
+                    margin: auto;
+                    padding-bottom: 2rem;
+                    padding-right: 0;
                 }
             }
         }
@@ -90,7 +111,7 @@
             width: auto;
             display: flex;
             align-items: center;
-            padding: 16px;
+            padding: 0.6rem;
             color: white;
             font-weight: bold;
             font-size: 18px;
