@@ -31,10 +31,17 @@
             align-items: stretch;
             color: White;
 
-            > img {
+            // Cause of a Chrome flex-bug, we need a wrapper around img for proper sizing,
+            // so we add picture, as flex-item, and img as content.
+            > picture {
                 flex: 14rem 0 0;
-                object-fit: cover;
                 box-sizing: content-box;
+
+                > img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             > div {
@@ -70,7 +77,7 @@
             }
 
             @include media-breakpoint-down(lg) {
-                > img {
+                > picture {
                     flex: 12rem 0 0;
                 }
 
@@ -84,11 +91,17 @@
                     display: block;
                 }
 
-                > img {
+                > picture {
                     height: 14rem;
                     display: block;
                     margin: auto;
                     padding-top: 2rem;
+
+                    > img {
+                        width: auto;
+                        margin: auto;
+                        display: block;
+                    }
                 }
 
                 > iframe {
