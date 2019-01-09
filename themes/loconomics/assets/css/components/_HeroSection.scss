@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 600px;
+    min-height: 600px;
     // Image must be set by the page using this component using something like
     //background-image: url('../images/hero/home1.jpg');
     // and too other images adjustments, like aligning or section height
@@ -59,11 +59,20 @@
         > a,
         > button {
             @extend .HeroButton;
+            margin-bottom: 1rem;
+        }
+
+        iframe {
+            display: block;
+            margin: auto;
+            margin-bottom: 1rem;
+            width: 18rem;
+            height: 10rem;
         }
     }
 
     @include media-breakpoint-down(md) {
-        height: 500px;
+        min-height: 500px;
 
         h1 {
             font-size: 2rem;
@@ -75,7 +84,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-        height: 350px;
+        min-height: 350px;
 
         h1 {
             font-size: 1.6rem;
