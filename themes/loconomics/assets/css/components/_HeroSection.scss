@@ -42,10 +42,12 @@
         z-index: 2;
         max-width: 60rem;
         margin: auto;
+        // Prevent to overlay the top fixed navbar
+        padding-top: 140px;
 
         @include media-breakpoint-down(md) {
             // Prevent to overlay the top fixed navbar
-            padding-top: 70px;
+            padding-top: 80px;
         }
 
         > p {
@@ -63,11 +65,26 @@
         }
 
         iframe {
+            $video-ratio: 1.77333;
+            $video-width: 18rem;
+
             display: block;
             margin: auto;
             margin-bottom: 1rem;
-            width: 18rem;
-            height: 10rem;
+            width: $video-width;
+            height: $video-width / $video-ratio;
+
+            @include media-breakpoint-up(md) {
+                $video-width: 27rem;
+                width: $video-width;
+                height: $video-width / $video-ratio;
+            }
+
+            @include media-breakpoint-up(xl) {
+                $video-width: 34rem;
+                width: $video-width;
+                height: $video-width / $video-ratio;
+            }
         }
     }
 
