@@ -11,7 +11,7 @@ This site uses [Hugo](https://gohugo.io). Hugo has some pretty extensive [docs](
 3. Optional but recommended: [Install Yarn for your platform](https://yarnpkg.com/en/docs/getting-started).
 4. Run `yarn` or `npm install` to install asset-processing dependencies.
 5. Run `hugo serve`.
-6. Visit http://localhost:1313/pages/. Pages are updated live in your browser whenever content or layouts change.
+6. Visit http://localhost:1313/. Pages are updated live in your browser whenever content or layouts change.
 7. Run `hugo` to build a final site for production. The pages are in the _public/_ directory.
 
 ## Layouts
