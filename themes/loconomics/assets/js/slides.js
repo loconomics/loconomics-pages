@@ -22,7 +22,8 @@
     indexElement.addEventListener('click', function (event) {
       var slide = event.target.getAttribute('href');
       if (slide) {
-        slide = slide.substr(1);
+        slide = slide.match(/-(\d)$/);
+        slide = slide && slide[1];
         currentSlide(slide);
       }
       event.preventDefault();
