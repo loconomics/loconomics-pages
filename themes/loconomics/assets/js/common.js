@@ -55,7 +55,7 @@
           fbq('track', 'ViewContent', {
             content_name: label
           });
-          gtag('join_90_days_free', {
+          gtag('event', 'join_90_days_free', {
             event_category: 'Buttons',
             event_label: label
           })
@@ -78,7 +78,7 @@
         var player = new Vimeo.Player(embedded);
         player.on('play', function() {
           if (production) {
-            gtag('play', {
+            gtag('event', 'play', {
               event_category: 'Videos',
               event_label: label
             });
