@@ -41,8 +41,8 @@
     });
   }
 
-  function initFBPixel() {
-    // Facebook Pixel custom events:
+  function initCoopButtonsTracking() {
+    // Facebook Pixel:
     // We have links to the coop site, will not get tracked as a PageView with
     // the standard snippet, so we track it as a ViewContent event providing
     // the coop domain and URL that was clicked.
@@ -50,25 +50,31 @@
       var href = event.target && event.target.getAttribute('href') || '';
       var found = href.match(/loconomics\.coop\/.*$/);
       if (found) {
+        var label = event.target.getAttribute('x-tag-label') || 'untagged: add x-tag-label attr to all coop links';
         if (production) {
           fbq('track', 'ViewContent', {
-            content_name: found[0]
+            content_name: label
           });
+          gtag('join_90_days_free', {
+            event_category: 'Buttons',
+            event_label: label
+          })
         }
         else {
-          console.warn('Will send fbq track ViewContent', found[0]);
+          console.warn('Will send fbq track ViewContent', label);
+          console.warn('Will send gtag track join_90_days_free', label);
         }
       }
     });
   }
 
-  function initGTags() {
+  function initVideoTracking() {
     // Google Analytics/Tags
     // Detect 'play' videos (Vimeo)
     if (window.Vimeo) {
       Array.slice.call(document.getElementsByTagName('iframe'), 0)
       .forEach(function(embedded) {
-        var label = embedded.getAttribute('x-tag-label') || 'untagged: add x-tag-label attr to the video iframe';
+        var label = embedded.getAttribute('x-tag-label') || 'untagged: add x-tag-label attr to all video iframes';
         var player = new Vimeo.Player(embedded);
         player.on('play', function() {
           if (production) {
@@ -88,8 +94,8 @@
   window.addEventListener('DOMContentLoaded', function () {
     initHomeHeroSlideshow();
     initSlideshowSection();
-    initFBPixel();
-    initGTags();
+    initCoopButtonsTracking();
+    initVideoTracking();
   });
 
 })(window);
