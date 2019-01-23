@@ -35,4 +35,21 @@
         ticking = true;
       }
     });
+
+    // Facebook Pixel custom events:
+    // We have links to the coop site, will not get tracked as a PageView with
+    // the standard snippet, so we track it as a ViewContent event providing
+    // the coop domain and URL that was clicked.
+    // Enabled only on production 'loconomics.com'
+    if (location.hostname === 'loconomics.com') {
+      window.addEventListener('click', function(event) {
+        var href = event.target && event.target.getAttribute('href') || '';
+        var found = href.match(/loconomics\.coop\/.*$/);
+        if (found) {
+          fbq('track', 'ViewContent', {
+            content_name: found[0]
+          });
+        }
+      });
+    }
 })(window);
