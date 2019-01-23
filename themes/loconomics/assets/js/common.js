@@ -72,7 +72,7 @@
     // Google Analytics/Tags
     // Detect 'play' videos (Vimeo)
     if (window.Vimeo) {
-      Array.slice.call(document.getElementsByTagName('iframe'), 0)
+      Array.prototype.slice.call(document.getElementsByTagName('iframe'), 0)
       .forEach(function(embedded) {
         var label = embedded.getAttribute('x-tag-label') || 'untagged: add x-tag-label attr to all video iframes';
         var player = new Vimeo.Player(embedded);
