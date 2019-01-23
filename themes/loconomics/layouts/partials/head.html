@@ -21,6 +21,9 @@
 
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
+    <!-- Vimeo player, to have javascript access to player events -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
     {{/* <!--  Vendor Scripts --> */}}
     {{ $jquery := resources.Get "/js/vendor/jquery/jquery.min.js" }}
     {{ $bootstrap := resources.Get "/js/vendor/bootstrap/bootstrap.min.js" }}
@@ -58,6 +61,4 @@
       &noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
-    <!-- Vimeo player, to have javascript access to player events -->
-    <script src="https://player.vimeo.com/api/player.js"></script>
   </head>
