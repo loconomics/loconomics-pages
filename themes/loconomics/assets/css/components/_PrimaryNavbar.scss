@@ -48,6 +48,7 @@
     .navbar-nav {
         justify-content: flex-end;
         width: 100%;
+        text-transform: uppercase;
 
         .nav-item {
             padding-left: 2em;
@@ -55,6 +56,11 @@
 
         .nav-link {
             color: white;
+        }
+
+        .btn-secondary {
+            // Prevent getting black on scrolling / white navbar
+            color: white !important;
         }
     }
 
