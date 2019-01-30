@@ -70,9 +70,11 @@
             // If using default text-align (left), use next gap
             //padding-top: 1em;
             // Prevent mixim links with back content on mobile when scroll on top (reset at is-scrolling)
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.7);
             // Apply transition to all, since the slide effect from Bootstrap uses transition too
             transition: all $scroll-transition;
+            border-radius: 4px;
+            padding-right: 1rem;
         }
 
         .PrimaryNavbar-brand {
