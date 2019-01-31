@@ -3,6 +3,8 @@
         <img class="PrimaryNavbar-logo" src="/images/logos/loconomics-white.svg" height="75" alt="Loconomics Logo">
         <img class="PrimaryNavbar-altLogo" src="/images/logos/loconomics-teal.svg" height="75" alt="Loonomics Logo" aria-hidden="true">
     </a>
+    {{ if .Params.without_navbar }}
+    {{ else }}
     <button class="navbar-toggler"
         type="button" data-toggle="collapse"
         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -21,4 +23,5 @@
             </li>
         </ul>
     </div>
+    {{ end }}
 </nav>
