@@ -1,20 +1,23 @@
+{{ if .Params.services }}
+{{ $s := .Params.services }}
 <section id="services" class="ServicesSection">
     <h2>Their Toolbelt Awaits…</h2>
     <ul>
         <li>
             <img src="/images/connections.svg" aria-hidden="true" />
-            <h3>Connections</h3>
-            <p>Students can chat, support & celebrate with their built-in community.</p>
+            <h3>{{ $s.connections.title }}</h3>
+            <p>{{ $s.connections.description }}</p>
         </li>
         <li>
             <img src="/images/client-management.svg" aria-hidden="true" />
-            <h3>Business Software</h3>
-            <p>Online listings, scheduling, and client management to get them started.</p>
+            <h3>{{ $s.client_management.title }}</h3>
+            <p>{{ $s.client_management.description }}</p>
         </li>
         <li>
             <img src="/images/scheduling.svg" aria-hidden="true" />
-            <h3>Reporting</h3>
-            <p>We provide custom reporting to help you track the success of students.</p>
+            <h3>{{ $s.scheduling.title }}</h3>
+            <p>{{ $s.scheduling.description }}</p>
         </li>
     </ul>
 </section>
+{{ end }}
