@@ -1,7 +1,7 @@
 {{ if .Params.services }}
 {{ $s := .Params.services }}
 <section id="services" class="ServicesSection">
-    <h2>Their Toolbelt Awaits…</h2>
+    <h2>{{ $s.title | default "Your Toolbet Awaits…" }}</h2>
     <ul>
         <li>
             <img src="/images/connections.svg" aria-hidden="true" />
