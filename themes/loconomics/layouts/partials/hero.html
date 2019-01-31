@@ -2,5 +2,9 @@
     <div class="HeroSection--content">
         <h1>{{ .Params.hero_title }}</h1>
         {{ if .Params.hero_description }}<p>{{ .Params.hero_description }}</p>{{ end }}
+        {{ if .Params.hero_button }}
+        <a x-tag-label="hero"
+            href="{{ .Params.hero_button.href }}">{{ .Params.hero_button.text }}</a>
+        {{ end }}
     </div>
 </section>

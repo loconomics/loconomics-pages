@@ -1,0 +1,16 @@
+/**
+ * higher-education landing page styles
+ */
+
+@import "../components/PrimaryNavbar";
+@import "../components/HeroSection";
+@import "../components/ServicesSection";
+@import "../components/SlideshowSection";
+@import "../components/PressSection";
+@import "../components/Footer";
+
+#higher-education {
+    .HeroSection {
+        background-image: url('../images/hero/higher-education.jpg');
+    }
+}
