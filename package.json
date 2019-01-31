@@ -26,7 +26,8 @@
     "autoprefixer": "^9.4.4",
     "bootstrap": "^4.1.3",
     "cross-var": "^1.1.0",
-    "postcss-cli": "^6.1.0"
+    "postcss-cli": "^6.1.0",
+    "postcss-discard-duplicates": "^4.0.2"
   },
   "devDependencies": {
     "sharp": "^0.21.0"
